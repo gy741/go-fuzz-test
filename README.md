@@ -1,1 +1,1 @@
-# go-fuzz-test
+Corpus for go-fuzz examples
