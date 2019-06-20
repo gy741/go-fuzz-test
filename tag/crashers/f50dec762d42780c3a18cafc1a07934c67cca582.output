@@ -1,0 +1,20 @@
+panic: runtime error: makeslice: len out of range
+
+goroutine 1 [running]:
+github.com/dhowden/tag.readBytes(0x2600000, 0xc000074480, 0xffffffffbd303030, 0x4d5420, 0xc000010044, 0x0, 0x0, 0xc000010044)
+	C:/SRC/src/github.com/dhowden/tag/util.go:36 +0x5f
+github.com/dhowden/tag.readString(0x2600000, 0xc000074480, 0xffffffffbd303030, 0x0, 0x0, 0x4c3c88, 0xc000010041)
+	C:/SRC/src/github.com/dhowden/tag/util.go:45 +0x62
+github.com/dhowden/tag.(*metadataVorbis).readVorbisComment(0xc000018020, 0x2600000, 0xc000074480, 0x2600000, 0xc000074480)
+	C:/SRC/src/github.com/dhowden/tag/vorbis.go:32 +0xc9
+github.com/dhowden/tag.(*metadataFLAC).readFLACMetadataBlock(0xc000006010, 0x517dc0, 0xc000074480, 0xc00001002c, 0x4, 0x0)
+	C:/SRC/src/github.com/dhowden/tag/flac.go:77 +0x359
+github.com/dhowden/tag.ReadFLACTags(0x517dc0, 0xc000074480, 0x468f3d, 0x5d0b2c4a, 0x181b0b8, 0x3b1fb19)
+	C:/SRC/src/github.com/dhowden/tag/flac.go:43 +0x26f
+github.com/dhowden/tag.Fuzz(0x3460000, 0xc, 0x200000, 0x2dc)
+	C:/SRC/src/github.com/dhowden/tag/Fuzz.go:7 +0xb9
+go-fuzz-dep.Main(0xc000087f80, 0x1, 0x1)
+	C:/Users/219005/AppData/Local/Temp/go-fuzz-build121240119/goroot/src/go-fuzz-dep/main.go:36 +0x1bd
+main.main()
+	C:/Users/219005/AppData/Local/Temp/go-fuzz-build121240119/gopath/src/github.com/dhowden/tag/go.fuzz.main/main.go:15 +0x59
+exit status 2
